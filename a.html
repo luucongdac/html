@@ -1,1 +1,49 @@
-hello
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>Read Text File</title> 
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="java_scrip.js"></script>
+
+</head> 
+  
+<body> 
+<div>
+    <h1>Read file</h1>
+    <input type="file"  id="inputfile"> 
+    <br> 
+    <br> 
+
+   
+    <pre>
+        <textarea class="area1" id="output"  rows="10" cols="30">No Data</textarea> 
+    </pre> 
+</div>
+
+<div>
+    <br> 
+    <br> 
+    <input type="button" value="Click..." onclick="msg()">
+    <pre>
+        <textarea class="area2" id="output2"  rows="10" cols="30">No Data</textarea> 
+    </pre> 
+
+</div>
+
+    <script type="text/javascript"> 
+        document.getElementById('inputfile').addEventListener('change', function() { 
+            var fr=new FileReader(); 
+            fr.onload=function(){ 
+                document.getElementById('output').textContent=""; 
+                document.getElementById('output').textContent=fr.result; 
+            } 
+              
+            fr.readAsText(this.files[0]); 
+        }) 
+        
+    </script> 
+
+</body> 
+  
+</html> 

@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(176, 224, 230);
+    background-image: url('onepeace.jpg');
+    height: 900px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+  }
+  h1 {
+    color: blue;
+  }
+  textarea {
+    outline-style: dashed;
+    outline-color: aqua;
+    height: 300px;
+    width: 600px;
+    resize: none;
+  }
